@@ -1,43 +1,43 @@
 {
   "majors": [
     {
-      "id": "1",
+      "id": 1,
       "name": "סיעוד"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "מדעי המחשב"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "פסיכולוגיה"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "פיזיקה"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "מתמטיקה"
     }
   ],
   "user_types": [
     {
-      "id": "1",
+      "id": 1,
       "role": "סטודנט"
     },
     {
-      "id": "2",
+      "id": 2,
       "role": "מרצה"
     },
     {
-      "id": "3",
+      "id": 3,
       "role": "מנהל מערכת"
     }
   ],
   "instructors": [
     {
-      "id": "1",
+      "id": 1,
       "user_type_id": 2,
       "first_name": "Avi",
       "last_name": "Cohen",
@@ -52,10 +52,11 @@
       "major_name": "סיעוד",
       "courses": [
         "יסודות הסיעוד"
-      ]
+      ],
+      "password": "6&I4t83L"
     },
     {
-      "id": "2",
+      "id": 2,
       "user_type_id": 2,
       "first_name": "Dana",
       "last_name": "Levi",
@@ -70,10 +71,11 @@
       "major_name": "סיעוד",
       "courses": [
         "יסודות הסיעוד"
-      ]
+      ],
+      "password": "5U0B5Z1&"
     },
     {
-      "id": "3",
+      "id": 3,
       "user_type_id": 2,
       "first_name": "Yossi",
       "last_name": "Mizrahi",
@@ -88,10 +90,11 @@
       "major_name": "סיעוד",
       "courses": [
         "סיעוד בחירום"
-      ]
+      ],
+      "password": "%$gMMnU7"
     },
     {
-      "id": "4",
+      "id": 4,
       "user_type_id": 2,
       "first_name": "Michal",
       "last_name": "Peretz",
@@ -106,10 +109,11 @@
       "major_name": "סיעוד",
       "courses": [
         "אנטומיה ופיזיולוגיה"
-      ]
+      ],
+      "password": "Ny5h#&gA"
     },
     {
-      "id": "5",
+      "id": 5,
       "user_type_id": 2,
       "first_name": "Ron",
       "last_name": "Biton",
@@ -125,10 +129,11 @@
       "courses": [
         "רשתות מחשבים",
         "אלגוריתמים ומבני נתונים"
-      ]
+      ],
+      "password": "1*o8wu$&"
     },
     {
-      "id": "6",
+      "id": 6,
       "user_type_id": 2,
       "first_name": "Sara",
       "last_name": "Abraham",
@@ -144,10 +149,11 @@
       "courses": [
         "אלגוריתמים ומבני נתונים",
         "מסדי נתונים"
-      ]
+      ],
+      "password": "nkCP7*Hr"
     },
     {
-      "id": "7",
+      "id": 7,
       "user_type_id": 2,
       "first_name": "Alon",
       "last_name": "Gabai",
@@ -162,10 +168,11 @@
       "major_name": "מדעי המחשב",
       "courses": [
         "בינה מלאכותית"
-      ]
+      ],
+      "password": "7^W&wfh5"
     },
     {
-      "id": "8",
+      "id": 8,
       "user_type_id": 2,
       "first_name": "Noa",
       "last_name": "Shapira",
@@ -180,10 +187,11 @@
       "major_name": "מדעי המחשב",
       "courses": [
         "אלגוריתמים ומבני נתונים"
-      ]
+      ],
+      "password": "IXiAb$5#"
     },
     {
-      "id": "9",
+      "id": 9,
       "user_type_id": 2,
       "first_name": "Gil",
       "last_name": "Dahan",
@@ -198,10 +206,11 @@
       "major_name": "פסיכולוגיה",
       "courses": [
         "שיטות מחקר"
-      ]
+      ],
+      "password": "*Ry$1*L3"
     },
     {
-      "id": "10",
+      "id": 10,
       "user_type_id": 2,
       "first_name": "Rachel",
       "last_name": "Amar",
@@ -217,10 +226,11 @@
       "courses": [
         "פסיכולוגיה התפתחותית",
         "פסיכולוגיה קלינית"
-      ]
+      ],
+      "password": "8@i1X41p"
     },
     {
-      "id": "11",
+      "id": 11,
       "user_type_id": 2,
       "first_name": "Amit",
       "last_name": "BenDavid",
@@ -235,10 +245,11 @@
       "major_name": "פסיכולוגיה",
       "courses": [
         "שיטות מחקר"
-      ]
+      ],
+      "password": "Izq@00@8"
     },
     {
-      "id": "12",
+      "id": 12,
       "user_type_id": 2,
       "first_name": "Liron",
       "last_name": "Azoulay",
@@ -254,10 +265,11 @@
       "courses": [
         "פסיכולוגיה קלינית",
         "שיטות מחקר"
-      ]
+      ],
+      "password": "3&$1vBDy"
     },
     {
-      "id": "13",
+      "id": 13,
       "user_type_id": 2,
       "first_name": "Yaron",
       "last_name": "Ohion",
@@ -272,10 +284,11 @@
       "major_name": "פיזיקה",
       "courses": [
         "אלקטרומגנטיות"
-      ]
+      ],
+      "password": "cKtZ5t3^"
     },
     {
-      "id": "14",
+      "id": 14,
       "user_type_id": 2,
       "first_name": "Hadas",
       "last_name": "Hadad",
@@ -291,10 +304,11 @@
       "courses": [
         "אלקטרומגנטיות",
         "תרמודינמיקה"
-      ]
+      ],
+      "password": "V6#%*qF7"
     },
     {
-      "id": "15",
+      "id": 15,
       "user_type_id": 2,
       "first_name": "Ido",
       "last_name": "Shalom",
@@ -310,10 +324,11 @@
       "courses": [
         "תרמודינמיקה",
         "אלקטרומגנטיות"
-      ]
+      ],
+      "password": "Yv$30Glh"
     },
     {
-      "id": "16",
+      "id": 16,
       "user_type_id": 2,
       "first_name": "Tamar",
       "last_name": "Nahum",
@@ -328,10 +343,11 @@
       "major_name": "פיזיקה",
       "courses": [
         "מכניקה קלאסית"
-      ]
+      ],
+      "password": "R%w27U3v"
     },
     {
-      "id": "17",
+      "id": 17,
       "user_type_id": 2,
       "first_name": "Boaz",
       "last_name": "Kadosh",
@@ -346,10 +362,11 @@
       "major_name": "מתמטיקה",
       "courses": [
         "מבוא לטופולוגיה"
-      ]
+      ],
+      "password": "E^i6^V0f"
     },
     {
-      "id": "18",
+      "id": 18,
       "user_type_id": 2,
       "first_name": "Orit",
       "last_name": "Zamir",
@@ -364,10 +381,11 @@
       "major_name": "מתמטיקה",
       "courses": [
         "חשבון אינפיניטסימלי"
-      ]
+      ],
+      "password": "vOU#4Z$f"
     },
     {
-      "id": "19",
+      "id": 19,
       "user_type_id": 2,
       "first_name": "Shai",
       "last_name": "Tal",
@@ -383,10 +401,11 @@
       "courses": [
         "אלגברה לינארית",
         "מבוא לטופולוגיה"
-      ]
+      ],
+      "password": "%2aqgJ&y"
     },
     {
-      "id": "20",
+      "id": 20,
       "user_type_id": 2,
       "first_name": "Rina",
       "last_name": "Yifrach",
@@ -401,12 +420,13 @@
       "major_name": "מתמטיקה",
       "courses": [
         "הסתברות וסטטיסטיקה"
-      ]
+      ],
+      "password": "6rzD4$Y#"
     }
   ],
   "students": [
     {
-      "id": "1",
+      "id": 1,
       "user_type_id": 1,
       "first_name": "Yael",
       "last_name": "Green",
@@ -421,10 +441,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "שלישית",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "h7dC!LiX"
     },
     {
-      "id": "2",
+      "id": 2,
       "user_type_id": 1,
       "first_name": "Or",
       "last_name": "Weiss",
@@ -439,10 +460,11 @@
       "major_id": 1,
       "major_name": "סיעוד",
       "study_year": "שנייה",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "M*xm92rH"
     },
     {
-      "id": "3",
+      "id": 3,
       "user_type_id": 1,
       "first_name": "Noam",
       "last_name": "Shemesh",
@@ -457,10 +479,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "4yhc&X7f"
     },
     {
-      "id": "4",
+      "id": 4,
       "user_type_id": 1,
       "first_name": "Maya",
       "last_name": "Oren",
@@ -475,10 +498,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "שנייה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "6%^D1zgC"
     },
     {
-      "id": "5",
+      "id": 5,
       "user_type_id": 1,
       "first_name": "Adam",
       "last_name": "Katz",
@@ -493,10 +517,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "ראשונה",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "NDvI!CM8"
     },
     {
-      "id": "6",
+      "id": 6,
       "user_type_id": 1,
       "first_name": "Lior",
       "last_name": "Bloom",
@@ -511,10 +536,11 @@
       "major_id": 1,
       "major_name": "סיעוד",
       "study_year": "רביעית",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "Ca$P5bvk"
     },
     {
-      "id": "7",
+      "id": 7,
       "user_type_id": 1,
       "first_name": "Daniel",
       "last_name": "Mor",
@@ -529,10 +555,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "ראשונה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "toww9%9J"
     },
     {
-      "id": "8",
+      "id": 8,
       "user_type_id": 1,
       "first_name": "Shir",
       "last_name": "Barak",
@@ -547,10 +574,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "ראשונה",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "@5D1*xzC"
     },
     {
-      "id": "9",
+      "id": 9,
       "user_type_id": 1,
       "first_name": "Omer",
       "last_name": "Yam",
@@ -565,10 +593,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "שנייה",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "F$t6Twq!"
     },
     {
-      "id": "10",
+      "id": 10,
       "user_type_id": 1,
       "first_name": "Carmel",
       "last_name": "Gefen",
@@ -583,10 +612,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "ראשונה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "e65&OgwK"
     },
     {
-      "id": "11",
+      "id": 11,
       "user_type_id": 1,
       "first_name": "Itai",
       "last_name": "Paz",
@@ -601,10 +631,11 @@
       "major_id": 1,
       "major_name": "סיעוד",
       "study_year": "רביעית",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "v^AyT2V5"
     },
     {
-      "id": "12",
+      "id": 12,
       "user_type_id": 1,
       "first_name": "Moriya",
       "last_name": "Roz",
@@ -619,10 +650,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "רביעית",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "%31I*g%b"
     },
     {
-      "id": "13",
+      "id": 13,
       "user_type_id": 1,
       "first_name": "Yuval",
       "last_name": "Shen",
@@ -637,10 +669,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "ראשונה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "2U@eR6ia"
     },
     {
-      "id": "14",
+      "id": 14,
       "user_type_id": 1,
       "first_name": "Gal",
       "last_name": "Gal",
@@ -655,10 +688,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "ראשונה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "U$B1KA%X"
     },
     {
-      "id": "15",
+      "id": 15,
       "user_type_id": 1,
       "first_name": "Ram",
       "last_name": "Baron",
@@ -673,10 +707,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "רביעית",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "7XQC6&TJ"
     },
     {
-      "id": "16",
+      "id": 16,
       "user_type_id": 1,
       "first_name": "Niv",
       "last_name": "Nur",
@@ -691,10 +726,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "שלישית",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "2^ft0ZlI"
     },
     {
-      "id": "17",
+      "id": 17,
       "user_type_id": 1,
       "first_name": "Adi",
       "last_name": "Lev",
@@ -709,10 +745,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "59!U*yN5"
     },
     {
-      "id": "18",
+      "id": 18,
       "user_type_id": 1,
       "first_name": "Shani",
       "last_name": "Kerem",
@@ -727,10 +764,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "רביעית",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "h#W76ZkF"
     },
     {
-      "id": "19",
+      "id": 19,
       "user_type_id": 1,
       "first_name": "Ben",
       "last_name": "Sadeh",
@@ -745,10 +783,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "ראשונה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "b0Hfg^rv"
     },
     {
-      "id": "20",
+      "id": 20,
       "user_type_id": 1,
       "first_name": "Liat",
       "last_name": "Tsur",
@@ -763,10 +802,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "0Tl*LfDa"
     },
     {
-      "id": "21",
+      "id": 21,
       "user_type_id": 1,
       "first_name": "Almog",
       "last_name": "Even",
@@ -781,10 +821,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "ראשונה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "9T5*ZCn*"
     },
     {
-      "id": "22",
+      "id": 22,
       "user_type_id": 1,
       "first_name": "Tom",
       "last_name": "Zamir",
@@ -799,10 +840,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "ראשונה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "ONH@E4gn"
     },
     {
-      "id": "23",
+      "id": 23,
       "user_type_id": 1,
       "first_name": "Hillel",
       "last_name": "Shahar",
@@ -817,10 +859,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "שנייה",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "I!EK#6*y"
     },
     {
-      "id": "24",
+      "id": 24,
       "user_type_id": 1,
       "first_name": "Anat",
       "last_name": "Alon",
@@ -835,10 +878,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "שלישית",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "y8abmC^G"
     },
     {
-      "id": "25",
+      "id": 25,
       "user_type_id": 1,
       "first_name": "Assaf",
       "last_name": "Zion",
@@ -853,10 +897,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "9!^#2F%j"
     },
     {
-      "id": "26",
+      "id": 26,
       "user_type_id": 1,
       "first_name": "Neta",
       "last_name": "Naam",
@@ -871,10 +916,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "רביעית",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "5oGOw&o@"
     },
     {
-      "id": "27",
+      "id": 27,
       "user_type_id": 1,
       "first_name": "Yehonatan",
       "last_name": "Yaron",
@@ -889,10 +935,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "שנייה",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "6W0^0GX6"
     },
     {
-      "id": "28",
+      "id": 28,
       "user_type_id": 1,
       "first_name": "Rita",
       "last_name": "Shamir",
@@ -907,10 +954,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "רביעית",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "c$DgCP#8"
     },
     {
-      "id": "29",
+      "id": 29,
       "user_type_id": 1,
       "first_name": "Dor",
       "last_name": "Tov",
@@ -925,10 +973,11 @@
       "major_id": 1,
       "major_name": "סיעוד",
       "study_year": "ראשונה",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "fcJw11*W"
     },
     {
-      "id": "30",
+      "id": 30,
       "user_type_id": 1,
       "first_name": "Peleg",
       "last_name": "Kochav",
@@ -943,10 +992,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "II#7an*1"
     },
     {
-      "id": "31",
+      "id": 31,
       "user_type_id": 1,
       "first_name": "Roni",
       "last_name": "Lilach",
@@ -961,10 +1011,11 @@
       "major_id": 1,
       "major_name": "סיעוד",
       "study_year": "רביעית",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "p6%L7Xwa"
     },
     {
-      "id": "32",
+      "id": 32,
       "user_type_id": 1,
       "first_name": "Shahar",
       "last_name": "Sela",
@@ -979,10 +1030,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "רביעית",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "v$WAj7vm"
     },
     {
-      "id": "33",
+      "id": 33,
       "user_type_id": 1,
       "first_name": "Aviya",
       "last_name": "Amud",
@@ -997,10 +1049,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "שלישית",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "9hEko^9c"
     },
     {
-      "id": "34",
+      "id": 34,
       "user_type_id": 1,
       "first_name": "Ella",
       "last_name": "Har",
@@ -1015,10 +1068,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "רביעית",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "7%hYaP5p"
     },
     {
-      "id": "35",
+      "id": 35,
       "user_type_id": 1,
       "first_name": "Matan",
       "last_name": "Nahal",
@@ -1033,10 +1087,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "שלישית",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "Gm3iHF&a"
     },
     {
-      "id": "36",
+      "id": 36,
       "user_type_id": 1,
       "first_name": "Hadar",
       "last_name": "Etz",
@@ -1051,10 +1106,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "שנייה",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "V#B*p9Wy"
     },
     {
-      "id": "37",
+      "id": 37,
       "user_type_id": 1,
       "first_name": "Ziv",
       "last_name": "Perach",
@@ -1069,10 +1125,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "רביעית",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "N44^XQ4&"
     },
     {
-      "id": "38",
+      "id": 38,
       "user_type_id": 1,
       "first_name": "Einav",
       "last_name": "Shaked",
@@ -1087,10 +1144,11 @@
       "major_id": 2,
       "major_name": "מדעי המחשב",
       "study_year": "שנייה",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "&v1S3^tl"
     },
     {
-      "id": "39",
+      "id": 39,
       "user_type_id": 1,
       "first_name": "Ariel",
       "last_name": "Anan",
@@ -1105,10 +1163,11 @@
       "major_id": 1,
       "major_name": "סיעוד",
       "study_year": "שלישית",
-      "family_status": "אלמן/ה"
+      "family_status": "אלמן/ה",
+      "password": "8%XLgT4r"
     },
     {
-      "id": "40",
+      "id": 40,
       "user_type_id": 1,
       "first_name": "Tal",
       "last_name": "Barad",
@@ -1123,10 +1182,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "En8KAp$&"
     },
     {
-      "id": "41",
+      "id": 41,
       "user_type_id": 1,
       "first_name": "Lotem",
       "last_name": "Deshe",
@@ -1141,10 +1201,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "1wr#&V^n"
     },
     {
-      "id": "42",
+      "id": 42,
       "user_type_id": 1,
       "first_name": "Sapir",
       "last_name": "Hol",
@@ -1159,10 +1220,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "שנייה",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "7yYh!&qJ"
     },
     {
-      "id": "43",
+      "id": 43,
       "user_type_id": 1,
       "first_name": "Amit",
       "last_name": "Mayim",
@@ -1177,10 +1239,11 @@
       "major_id": 1,
       "major_name": "סיעוד",
       "study_year": "ראשונה",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "U2q$r&nH"
     },
     {
-      "id": "44",
+      "id": 44,
       "user_type_id": 1,
       "first_name": "Naomi",
       "last_name": "Esh",
@@ -1195,10 +1258,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "ראשונה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "N1BMw9Z!"
     },
     {
-      "id": "45",
+      "id": 45,
       "user_type_id": 1,
       "first_name": "Shlomi",
       "last_name": "Or",
@@ -1213,10 +1277,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "שנייה",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "JGfbd38!"
     },
     {
-      "id": "46",
+      "id": 46,
       "user_type_id": 1,
       "first_name": "Gaia",
       "last_name": "Hoshech",
@@ -1231,10 +1296,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "רביעית",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "Rv&4JURU"
     },
     {
-      "id": "47",
+      "id": 47,
       "user_type_id": 1,
       "first_name": "Bar",
       "last_name": "Boker",
@@ -1249,10 +1315,11 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "רביעית",
-      "family_status": "נשוי/אה"
+      "family_status": "נשוי/אה",
+      "password": "NYPcf4C$"
     },
     {
-      "id": "48",
+      "id": 48,
       "user_type_id": 1,
       "first_name": "Alma",
       "last_name": "Erev",
@@ -1267,10 +1334,11 @@
       "major_id": 4,
       "major_name": "פיזיקה",
       "study_year": "רביעית",
-      "family_status": "גרוש/ה"
+      "family_status": "גרוש/ה",
+      "password": "3b4%3y0w"
     },
     {
-      "id": "49",
+      "id": 49,
       "user_type_id": 1,
       "first_name": "Shaked",
       "last_name": "Laila",
@@ -1285,10 +1353,11 @@
       "major_id": 3,
       "major_name": "פסיכולוגיה",
       "study_year": "רביעית",
-      "family_status": "רווק/ה"
+      "family_status": "רווק/ה",
+      "password": "8a%UO#Qv"
     },
     {
-      "id": "50",
+      "id": 50,
       "user_type_id": 1,
       "first_name": "Yair",
       "last_name": "Tzohoraim",
@@ -1303,26 +1372,8 @@
       "major_id": 5,
       "major_name": "מתמטיקה",
       "study_year": "שנייה",
-      "family_status": "נשוי/אה"
-    },
-    {
-      "id": "X69gTPHFQUE",
-      "user_type_id": 1,
-      "first_name": "רחלי",
-      "last_name": "ורנר",
-      "email": "ggggn@student.college.ac.il",
-      "password": "h7dC!LiX",
-      "address": {
-        "city": "jerusalem",
-        "street": "הרב מאיר פניז'ל",
-        "number": 4
-      },
-      "phone": "0533159119",
-      "age": 42,
-      "major_id": 1,
-      "major_name": "סיעוד",
-      "study_year": "שלישית",
-      "family_status": "רווק/ה"
+      "family_status": "נשוי/אה",
+      "password": "2av#wetv"
     }
   ],
   "assignments": {
@@ -2493,8 +2544,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "_xW-YZxiCyY"
+      ]
     },
     {
       "student_id": 2,
@@ -2651,8 +2701,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "_LCktjw46jU"
+      ]
     },
     {
       "student_id": 3,
@@ -2809,8 +2858,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "25kIuHej5Bk"
+      ]
     },
     {
       "student_id": 4,
@@ -2967,8 +3015,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "jGZd6uZf0_g"
+      ]
     },
     {
       "student_id": 5,
@@ -3125,8 +3172,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "6TLMQxcDtys"
+      ]
     },
     {
       "student_id": 6,
@@ -3283,8 +3329,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "CpmUNAlLafQ"
+      ]
     },
     {
       "student_id": 7,
@@ -3441,8 +3486,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "5igAQQ-mBtc"
+      ]
     },
     {
       "student_id": 8,
@@ -3599,8 +3643,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "EQAPYA-JQ-8"
+      ]
     },
     {
       "student_id": 9,
@@ -3757,8 +3800,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "8VxqwO2Wr6I"
+      ]
     },
     {
       "student_id": 10,
@@ -3915,8 +3957,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "kysrI6NnV3c"
+      ]
     },
     {
       "student_id": 11,
@@ -4073,8 +4114,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "04b2BWpSzAo"
+      ]
     },
     {
       "student_id": 12,
@@ -4231,8 +4271,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "NM6mPhrq0O8"
+      ]
     },
     {
       "student_id": 13,
@@ -4389,8 +4428,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "RPSVkZrI40M"
+      ]
     },
     {
       "student_id": 14,
@@ -4547,8 +4585,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "IJm4ljZsHgU"
+      ]
     },
     {
       "student_id": 15,
@@ -4705,8 +4742,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "XYSso_8s58A"
+      ]
     },
     {
       "student_id": 16,
@@ -4863,8 +4899,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "IE3-RrSwb4E"
+      ]
     },
     {
       "student_id": 17,
@@ -5021,8 +5056,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "YDuH5ZyWTVM"
+      ]
     },
     {
       "student_id": 18,
@@ -5179,8 +5213,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "Ni27JoN1SXE"
+      ]
     },
     {
       "student_id": 19,
@@ -5337,8 +5370,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "5MQcdFEiYFk"
+      ]
     },
     {
       "student_id": 20,
@@ -5495,8 +5527,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "ibvHEdCHmLE"
+      ]
     },
     {
       "student_id": 21,
@@ -5653,8 +5684,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "C06VsEWC6MY"
+      ]
     },
     {
       "student_id": 22,
@@ -5811,8 +5841,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "Cp0C9IEn5Zc"
+      ]
     },
     {
       "student_id": 23,
@@ -5969,8 +5998,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "Rh9i9oZiI5k"
+      ]
     },
     {
       "student_id": 24,
@@ -6127,8 +6155,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "hmglY3nW4UE"
+      ]
     },
     {
       "student_id": 25,
@@ -6285,8 +6312,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "clfP-g-eXVk"
+      ]
     },
     {
       "student_id": 26,
@@ -6443,8 +6469,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "zWnX0wKBNl0"
+      ]
     },
     {
       "student_id": 27,
@@ -6601,8 +6626,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "5oODq_ue1n0"
+      ]
     },
     {
       "student_id": 28,
@@ -6759,8 +6783,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "zAFgt-24Xv8"
+      ]
     },
     {
       "student_id": 29,
@@ -6917,8 +6940,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "coRGK_X60O4"
+      ]
     },
     {
       "student_id": 30,
@@ -7075,8 +7097,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "ICkH55lGIok"
+      ]
     },
     {
       "student_id": 31,
@@ -7233,8 +7254,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "QbGCfZcaTiw"
+      ]
     },
     {
       "student_id": 32,
@@ -7391,8 +7411,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "C_NdoAO5pK4"
+      ]
     },
     {
       "student_id": 33,
@@ -7549,8 +7568,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "8BrQ1oa_ltQ"
+      ]
     },
     {
       "student_id": 34,
@@ -7707,8 +7725,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "f4T5UDo9pIs"
+      ]
     },
     {
       "student_id": 35,
@@ -7865,8 +7882,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "UERJYRJ4awo"
+      ]
     },
     {
       "student_id": 36,
@@ -8023,8 +8039,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "97851r_ZbwM"
+      ]
     },
     {
       "student_id": 37,
@@ -8181,8 +8196,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "RH-lPfn8Ll0"
+      ]
     },
     {
       "student_id": 38,
@@ -8339,8 +8353,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "BrNMlezY8vw"
+      ]
     },
     {
       "student_id": 39,
@@ -8497,8 +8510,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "3Hl6GTd0aVI"
+      ]
     },
     {
       "student_id": 40,
@@ -8655,8 +8667,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "R-1Ysj7aejs"
+      ]
     },
     {
       "student_id": 41,
@@ -8813,8 +8824,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "yzC36Av7oDI"
+      ]
     },
     {
       "student_id": 42,
@@ -8971,8 +8981,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "Z-2f2T6izZk"
+      ]
     },
     {
       "student_id": 43,
@@ -9129,8 +9138,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "1hjLVan8GS8"
+      ]
     },
     {
       "student_id": 44,
@@ -9287,8 +9295,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "lpcKzLbd2GU"
+      ]
     },
     {
       "student_id": 45,
@@ -9445,8 +9452,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "42aS40oM39Q"
+      ]
     },
     {
       "student_id": 46,
@@ -9603,8 +9609,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "tdaqrPKKBIo"
+      ]
     },
     {
       "student_id": 47,
@@ -9761,8 +9766,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "h7AX_jWnfPA"
+      ]
     },
     {
       "student_id": 48,
@@ -9919,8 +9923,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "SB8VIAEvZUA"
+      ]
     },
     {
       "student_id": 49,
@@ -10077,8 +10080,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "9OBVC9YmeeQ"
+      ]
     },
     {
       "student_id": 50,
@@ -10235,9 +10237,7 @@
           "completed": false,
           "score": null
         }
-      ],
-      "id": "B38Ny1QL5Yg"
+      ]
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../store/store';
-const StudentAssignments = () => {
+import type { StudentTask } from '../../Models/studentTasks.model';
+import  Course from './Course/Course'
+
+const Courses = () => {
   const currentUser = useSelector((state: RootState) => state.user.currentUser);
-  const [assignments, setAssignments] = useState<any[]>([]);
+  const [assignments, setAssignments] = useState<StudentTask[]>([]);
   const allJson = 'http://localhost:3001';
 
   useEffect(() => {
     const fetchTasks = async () => {
-      // שלב 1 — שולפים את טראקינג של התלמיד הספציפי
       const trackingRes = await fetch(`${allJson}/tracking?student_id=${currentUser.id}`);
       const trackingData = await trackingRes.json();
-      const studentTracking = trackingData[0]; // יש רק רשומה אחת לכל תלמיד
+      const studentTracking = trackingData[0]; 
 
-      // שלב 2 — שולפים את כל המשימות לפי המגמה של התלמיד
       const majorMap: Record<number, string> = {
         1: 'nursing',
         2: 'cs',
@@ -42,19 +43,13 @@ const StudentAssignments = () => {
 
     if (currentUser) fetchTasks();
   }, [currentUser]);
-
   return (
-    <div>
-      {assignments.map((a) => (
-        <div key={a.task_number}>
-          <h3>{a.title}</h3>
-          <p>{a.description}</p>
-          <p>בוצע: {a.completed ? 'כן' : 'לא'}</p>
-          <p>ציון: {a.score ?? 'אין עדיין'}</p>
-        </div>
-      ))}
-    </div>
-  );
+  <div>
+    {assignments.map((a: StudentTask) => (
+      <Course key={a.task_number} studentTask={a} />
+    ))}
+  </div>
+);
 };
 
-export default StudentAssignments;
+export default Courses;
