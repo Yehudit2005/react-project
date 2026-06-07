@@ -1,13 +1,20 @@
-import type { FC } from 'react';
+import { useState, type FC } from 'react';
 import type { StudentTask } from '../../../Models/studentTasks.model';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import type { TeacherTask } from '../../../Models/teacherTask.model';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../../store/store';
+
+const allJson = 'http://localhost:3001';
 
 interface CourseProps {
   studentTask: StudentTask;
 }
 
 const Course: FC<CourseProps> = ({ studentTask }) => {
+  const currentUser = useSelector((state: RootState) => state.user.currentUser);
+  const [isOpen, setIsOpen] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -16,28 +23,60 @@ const Course: FC<CourseProps> = ({ studentTask }) => {
     validationSchema: yup.object().shape({
       feedback: yup.string()
         .max(300, 'המשוב לא יכול לעלות על 300 תווים')
+        .min(10, 'המשוב לא יכול להכיל פחות מ10 תווים')
         .required('שדה חובה'),
     }),
-    onSubmit: (values) => {
+    onSubmit: async () => {
+      await updateTeacher();
     }
   });
 
+  const updateTeacher = async () => {
+    const newTask: TeacherTask = {
+      id: currentUser.id,
+      task_title: studentTask.title,
+      student_name: currentUser.first_name,
+      score: null
+    };
+
+    const res = await fetch(`${allJson}/instructors/${studentTask.instructor_id}`);
+    const instructor = await res.json();
+
+    const updatedInstructor = {
+      ...instructor,
+      pending_reviews: [...instructor.pending_reviews, newTask]
+    };
+
+    await fetch(`${allJson}/instructors/${studentTask.instructor_id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedInstructor)
+    });
+  };
+
   return (
     <div>
-      <h3>{studentTask.title}</h3>
-      <p>{studentTask.description}</p>
-      <p>בוצע: {studentTask.completed ? 'כן' : 'לא'}</p>
-      <p>ציון: {studentTask.score ?? 'אין עדיין'}</p>
-      <form onSubmit={formik.handleSubmit}>
-        <input
-          name="feedback"
-          placeholder="משוב ופירוט איך היתה המשימה (עד 300 תווים)"
-          onChange={formik.handleChange}
-          value={formik.values.feedback}
-        />
-        {formik.errors.feedback ? <div>{formik.errors.feedback}</div> : ''}
-  <button type="submit">הגשה</button>
-      </form>
+      <h3 onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer' }}>
+        {studentTask.title}
+      </h3>
+
+      {isOpen && (
+        <>
+          <p>{studentTask.description}</p>
+          <p>בוצע: {studentTask.completed ? 'כן' : 'לא'}</p>
+          <p>ציון: {studentTask.score ?? 'אין עדיין'}</p>
+          <form onSubmit={formik.handleSubmit}>
+            <input
+              name="feedback"
+              placeholder="משוב ופירוט איך היתה המשימה (עד 300 תווים)"
+              onChange={formik.handleChange}
+              value={formik.values.feedback}
+            />
+            {formik.errors.feedback && <div>{formik.errors.feedback}</div>}
+            <button type="submit" disabled={!formik.isValid || !formik.dirty}>הגשה</button>
+          </form>
+        </>
+      )}
     </div>
   );
 };
