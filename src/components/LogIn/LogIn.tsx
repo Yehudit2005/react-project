@@ -3,12 +3,15 @@ import './LogIn.scss';
 import { useNavigate } from 'react-router';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../store/userSlice';
 
 interface LogInProps { }
 
 const LogIn: FC<LogInProps> = () => {
   const navigate = useNavigate();
   const allJson = 'http://localhost:3001';
+  const dispatch = useDispatch();
 
   const formik = useFormik({
     initialValues: { email: '', password: '' },
@@ -25,14 +28,11 @@ const LogIn: FC<LogInProps> = () => {
       const studentsApi = await fetch(`${allJson}/students`);
       const students = await studentsApi.json();
       const found = students.find((s: any) => s.email === values.email);
-  console.log('found:', found);
-
       if (found) {
         if (found.password === values.password) {
-            console.log("עעעעעע");
-localStorage.setItem('loggedUser', JSON.stringify(found));
-navigate('/home/courses');
-          // navigate('/home');
+          console.log("עעעעעע");
+          dispatch(setUser(found));
+          navigate('/home/courses');
         } else {
           formik.setFieldError('password', 'סיסמא שגויה, נסה שוב');
         }
