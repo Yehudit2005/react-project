@@ -1,160 +1,60 @@
-import React, { useState, useEffect } from 'react';
-import dbData from '../../../JASONSERVER/db.json';
-
-interface Student {
-  id: number;
-  user_type_id: number;
-  first_name: string;
-  last_name: string;
-  email: string;
-  address: {
-    city: string;
-    street: string;
-    number: number;
-  };
-  phone: string;
-  age: number;
-  major_id: number;
-  major_name: string;
-  study_year: string;
-  family_status: string;
-}
-
-interface Assignment {
-  task_number: number;
-  completed: boolean;
-  score: number | null;
-}
-
-export default function StudentDashboard() {
-  const [studentInfo, setStudentInfo] = useState<Student | null>(null);
-  const [assignments, setAssignments] = useState<Assignment[]>([]);
-  const [loading, setLoading] = useState(true);
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../store/store';
+const StudentAssignments = () => {
+  const currentUser = useSelector((state: RootState) => state.user.currentUser);
+  const [assignments, setAssignments] = useState<any[]>([]);
+  const allJson = 'http://localhost:3001';
 
   useEffect(() => {
-    const loggedUser = localStorage.getItem('loggedUser');
+    const fetchTasks = async () => {
+      // שלב 1 — שולפים את טראקינג של התלמיד הספציפי
+      const trackingRes = await fetch(`${allJson}/tracking?student_id=${currentUser.id}`);
+      const trackingData = await trackingRes.json();
+      const studentTracking = trackingData[0]; // יש רק רשומה אחת לכל תלמיד
 
-    if (loggedUser) {
-      const loggedInIdNum = Number(loggedUser);
+      // שלב 2 — שולפים את כל המשימות לפי המגמה של התלמיד
+      const majorMap: Record<number, string> = {
+        1: 'nursing',
+        2: 'cs',
+        3: 'psychology',
+        4: 'physics',
+        5: 'mathematics'
+      };
+      const majorKey = majorMap[currentUser.major_id];
+      const assignmentsRes = await fetch(`${allJson}/assignments`);
+      const allAssignments = await assignmentsRes.json();
+      const majorAssignments = allAssignments[majorKey];
 
-      const currentStudent = dbData.students.find(
-        (s) => s.id === loggedInIdNum
-      );
+      // שלב 3 — מחברים בין טראקינג למשימות
+      const combined = studentTracking.assignments.map((track: any) => {
+        const details = majorAssignments.find(
+          (a: any) => a.task_number === track.task_number
+        );
+        return {
+          ...track,
+          ...details
+        };
+      });
 
-      setStudentInfo(currentStudent ?? null);
+      setAssignments(combined);
+    };
 
-      const currentTracking = dbData.tracking.find(
-        (t) => t.student_id === loggedInIdNum
-      );
-
-      if (currentTracking?.assignments) {
-        setAssignments(currentTracking.assignments);
-      }
-    }
-
-    setLoading(false);
-  }, []);
-
-  if (loading) {
-    return <div>טוען נתונים...</div>;
-  }
-
-  if (!studentInfo) {
-    return <div>לא נמצאו פרטי סטודנט מחובר.</div>;
-  }
-
-  const pendingTasks = assignments.filter(
-    (task) => !task.completed
-  );
-
-  const completedTasks = assignments.filter(
-    (task) => task.completed
-  );
-
-  const tasksWithScore = completedTasks.filter(
-    (task) => task.score !== null
-  );
-
-  const totalScore = tasksWithScore.reduce(
-    (sum, task) => sum + (task.score ?? 0),
-    0
-  );
-
-  const averageScore =
-    tasksWithScore.length > 0
-      ? (totalScore / tasksWithScore.length).toFixed(1)
-      : '0';
+    if (currentUser) fetchTasks();
+  }, [currentUser]);
 
   return (
     <div>
-      <h2>
-        שלום, {studentInfo.first_name} {studentInfo.last_name}
-      </h2>
-
-      <p>חוג לימודים: {studentInfo.major_name}</p>
-
-      <div>
-        <div>
-          <h3>משימות לביצוע</h3>
-          <p>{pendingTasks.length}</p>
+      {assignments.map((a) => (
+        <div key={a.task_number}>
+          <h3>{a.title}</h3>
+          <p>{a.description}</p>
+          <p>בוצע: {a.completed ? 'כן' : 'לא'}</p>
+          <p>ציון: {a.score ?? 'אין עדיין'}</p>
         </div>
-
-        <div>
-          <h3>משימות שהושלמו</h3>
-          <p>{completedTasks.length}</p>
-        </div>
-
-        <div>
-          <h3>ממוצע ציונים</h3>
-          <p>{averageScore}</p>
-        </div>
-      </div>
-
-      <hr />
-
-      <h3>משימות שטרם הושלמו</h3>
-
-      {pendingTasks.length === 0 ? (
-        <p>כל הכבוד! אין משימות פתוחות.</p>
-      ) : (
-        <ul>
-          {pendingTasks.map((task) => (
-            <li key={task.task_number}>
-              מטלה מספר {task.task_number} — טרם בוצע
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <h3>משימות שהושלמו והיסטוריית ציונים</h3>
-
-      {completedTasks.length === 0 ? (
-        <p>טרם הוגשו משימות.</p>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>מספר מטלה</th>
-              <th>סטטוס</th>
-              <th>ציון</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {completedTasks.map((task) => (
-              <tr key={task.task_number}>
-                <td>מטלה מספר {task.task_number}</td>
-                <td>הושלמה</td>
-                <td>
-                  {task.score !== null
-                    ? task.score
-                    : 'אין ציון'}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+      ))}
     </div>
   );
-}
+};
+
+export default StudentAssignments;
