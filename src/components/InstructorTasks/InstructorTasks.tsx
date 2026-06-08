@@ -11,9 +11,13 @@ const allJson = 'http://localhost:3001';
 const InstructorTasks: FC<InstructorTasksProps> = () => {
   const currentUser = useSelector((state: RootState) => state.user.currentUser);
   const [tasks, setTasks] = useState<TeacherTask[]>([]);
+const [search, setSearch] = useState('');
 
+const filtered = tasks.filter((t) =>
+  t.task_title.includes(search)
+);
   useEffect(() => {
-    if (!currentUser) return; // מונע קריאה כשעדיין null
+    if (!currentUser) return; // 
 
     const fetchTasks = async () => {
       const res = await fetch(`${allJson}/instructors/${currentUser.id}`);
@@ -24,13 +28,18 @@ const InstructorTasks: FC<InstructorTasksProps> = () => {
     fetchTasks();
   }, [currentUser]);
 
-  return (
-    <div>
-      {tasks.map((a: TeacherTask) => (
-        <InstructorTask key={a.task_id} task={a} />
-      ))}
-    </div>
-  );
+return (
+  <div>
+    <input
+      placeholder="חיפוש משימה..."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    />
+    {filtered.map((t) => (
+      <InstructorTask key={`${t.student_id}_${t.task_number}`} task={t} />
+    ))}
+  </div>
+);
 };
 
 export default InstructorTasks;

@@ -8,7 +8,11 @@ const Courses = () => {
   const currentUser = useSelector((state: RootState) => state.user.currentUser);
   const [assignments, setAssignments] = useState<StudentTask[]>([]);
   const allJson = 'http://localhost:3001';
+const [search, setSearch] = useState('');
 
+const filtered = assignments.filter((a) =>
+  a.title.includes(search)
+);
   useEffect(() => {
     const fetchTasks = async () => {
       const trackingRes = await fetch(`${allJson}/tracking?student_id=${currentUser.id}`);
@@ -43,10 +47,16 @@ const Courses = () => {
 
     if (currentUser) fetchTasks();
   }, [currentUser]);
-  return (
+return (
   <div>
-    {assignments.map((a: StudentTask) => (
-  <Course key={`${a.major_name}_${a.task_number}`} studentTask={a} />     ))}
+    <input
+      placeholder="חיפוש משימה..."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    />
+    {filtered.map((a) => (
+      <Course key={`${a.major_name}_${a.task_number}`} studentTask={a} />
+    ))}
   </div>
 );
 };
