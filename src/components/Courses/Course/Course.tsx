@@ -15,7 +15,6 @@ interface CourseProps {
 const Course: FC<CourseProps> = ({ studentTask }) => {
   const currentUser = useSelector((state: RootState) => state.user.currentUser);
   const [isOpen, setIsOpen] = useState(false);
-
   const formik = useFormik({
     initialValues: {
       feedback: '',
@@ -33,9 +32,12 @@ const Course: FC<CourseProps> = ({ studentTask }) => {
 
   const updateTeacher = async () => {
     const newTask: TeacherTask = {
-      id: currentUser.id,
+      task_number: studentTask.task_number,
+      major_name: studentTask.major_name,
+      student_id: currentUser.id,
       task_title: studentTask.title,
       student_name: currentUser.first_name,
+      feedback: formik.values.feedback,
       score: null
     };
 
@@ -56,7 +58,7 @@ const Course: FC<CourseProps> = ({ studentTask }) => {
 
   return (
     <div>
-      <h3 onClick={() => setIsOpen(!isOpen)} style={{ cursor: 'pointer' }}>
+      <h3 onClick={() => setIsOpen(!isOpen)}>
         {studentTask.title}
       </h3>
 

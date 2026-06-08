@@ -786,6 +786,25 @@
           "task_title": "גיאומטריה אנליטית",
           "feedback": "משוב לדוגמה על המשימה",
           "score": null
+        },
+        {
+          "id": "1",
+          "task_title": "נגזרות - כללים בסיסיים",
+          "student_name": "Yael",
+          "score": null
+        },
+        {
+          "id": "1",
+          "task_title": "נגזרות - כללים בסיסיים",
+          "student_name": "Yael",
+          "score": null
+        },
+        {
+          "id": "1",
+          "task_title": "נגזרות - כללים בסיסיים",
+          "student_name": "Yael",
+          "feedback": "לא משהו חבל מאד מאד",
+          "score": null
         }
       ]
     }
@@ -3736,7 +3755,7 @@
           "student_id": 7,
           "task_number": 5,
           "completed": false,
-          "score": null
+          "score": 100
         },
         {
           "student_id": 7,
@@ -8044,7 +8063,7 @@
           "student_id": 34,
           "task_number": 12,
           "completed": false,
-          "score": null
+          "score": 10
         },
         {
           "student_id": 34,

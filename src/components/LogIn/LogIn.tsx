@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import { useState, type FC } from 'react';
 import './LogIn.scss';
 import { useNavigate } from 'react-router';
 import { useFormik } from 'formik';
@@ -12,6 +12,7 @@ const LogIn: FC<LogInProps> = () => {
   const navigate = useNavigate();
   const allJson = 'http://localhost:3001';
   const dispatch = useDispatch();
+  const [isTeacher, setIsTeacher] = useState(true)
 
   const formik = useFormik({
     initialValues: { email: '', password: '' },
@@ -27,19 +28,36 @@ const LogIn: FC<LogInProps> = () => {
     onSubmit: async (values) => {
       const studentsApi = await fetch(`${allJson}/students`);
       const students = await studentsApi.json();
-      const found = students.find((s: any) => s.email === values.email);
-      if (found) {
-        if (found.password === values.password) {
-          console.log("עעעעעע");
-          dispatch(setUser(found));
+      const foundStudent = students.find((s: any) => s.email === values.email);
+
+      if (foundStudent) {
+        setIsTeacher(false)
+        if (foundStudent.password === values.password) {
+          dispatch(setUser(foundStudent));
           navigate('/home/courses');
         } else {
           formik.setFieldError('password', 'סיסמא שגויה, נסה שוב');
         }
-      } else {
-        navigate('/register');
+        return;
       }
+
+      const instructorsApi = await fetch(`${allJson}/instructors`);
+      const instructors = await instructorsApi.json();
+      const foundInstructor = instructors.find((i: any) => i.email === values.email);
+
+      if (foundInstructor) {
+        setIsTeacher(true)
+        if (foundInstructor.password === values.password) {
+          dispatch(setUser(foundInstructor));
+          navigate('/home/instructorTasks');
+        } else {
+          formik.setFieldError('password', 'סיסמא שגויה, נסה שוב');
+        }
+        return;
+      }
+      navigate('/register');
     }
+
   });
 
   return (

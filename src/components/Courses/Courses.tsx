@@ -34,8 +34,8 @@ const Courses = () => {
         );
         return {
           ...track,
-          ...details
-        };
+          ...details,
+  id: `${track.major_name}_${track.task_number}`        };
       });
 
       setAssignments(combined);
@@ -46,8 +46,7 @@ const Courses = () => {
   return (
   <div>
     {assignments.map((a: StudentTask) => (
-      <Course key={a.task_number} studentTask={a} />
-    ))}
+  <Course key={`${a.major_name}_${a.task_number}`} studentTask={a} />     ))}
   </div>
 );
 };

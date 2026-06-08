@@ -8,6 +8,7 @@ import Profile from './components/Profile/Profile';
 import Courses from './components/Courses/Courses';
 import NewTask from './components/NewTask/NewTask';
 import Register from './components/Register/Register';
+import InstructorTasks from './components/InstructorTasks/InstructorTasks';
 // import NotFound from './components/NotFound/NotFound';
 
 function App() {
@@ -19,16 +20,17 @@ function App() {
 
   return (
     <div dir="rtl" className="row">
-<Routes>
-    <Route path="/" element={<Home />} />
-  <Route path="/logIn" element={<LogIn />} />
-  <Route path="/register" element={<Register />} />
-  <Route path="/home" element={<Home />}>
-    <Route path="profile" element={<Profile />} />
-    <Route path="courses" element={<Courses />} />
-    <Route path="newTask" element={<NewTask />} />
-  </Route>
-</Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/logIn" element={<LogIn />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Home />}>
+          <Route path="profile" element={<Profile />} />
+          <Route path="courses" element={<Courses />} />
+          <Route path="newTask" element={<NewTask />} />
+          <Route path="instructorTasks" element={<InstructorTasks />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
